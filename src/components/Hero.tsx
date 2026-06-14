@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { useEffect, useState } from 'react';
-import { ArrowDown, Vote } from 'lucide-react';
+import { ArrowDown, Vote, Activity } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import heroBg from '../assets/images/mogadishu_sunset_bg_1781435594991.jpg';
 
 export default function Hero() {
@@ -86,7 +87,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="flex flex-col sm:flex-row gap-4"
+          className="flex flex-col sm:flex-row gap-4 flex-wrap justify-center items-center"
         >
           <button 
             onClick={handleScrollToVote}
@@ -95,12 +96,21 @@ export default function Hero() {
             <Vote className="w-5 h-5" />
             U Codee Musharaxaaga
           </button>
+          
+          <Link 
+            to="/dashboard"
+            className="flex items-center justify-center gap-2 bg-national-blue hover:bg-blue-600 text-white transition-all duration-300 px-8 py-4 rounded-full font-bold text-lg shadow-lg shadow-blue-500/30"
+          >
+            <Activity className="w-5 h-5" />
+            Dashboard-ka Natiijada
+          </Link>
+
           <button 
             onClick={handleScrollToResults}
             className="flex items-center justify-center gap-2 bg-charcoal/50 hover:bg-charcoal/80 border border-white/30 text-white transition-all duration-300 px-8 py-4 rounded-full font-bold text-lg backdrop-blur-sm"
           >
             <ArrowDown className="w-5 h-5" />
-            Eeg Natiijada Live-ka ah
+            Eeg Codadka Live
           </button>
         </motion.div>
       </div>
