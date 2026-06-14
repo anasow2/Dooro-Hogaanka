@@ -6,14 +6,14 @@ import heroBg from '../assets/images/mogadishu_sunset_bg_1781435594991.jpg';
 
 export default function Hero() {
   const [timeLeft, setTimeLeft] = useState(() => {
-    // Election Day: 2026-05-15
-    const targetDate = new Date('2026-05-15T00:00:00Z').getTime();
+    // Election Day: 4 days from now
+    const targetDate = new Date('2026-06-18T18:00:00Z').getTime();
     return Math.max(0, targetDate - Date.now());
   });
 
   useEffect(() => {
     const timer = setInterval(() => {
-      const targetDate = new Date('2026-05-15T00:00:00Z').getTime();
+      const targetDate = new Date('2026-06-18T18:00:00Z').getTime();
       setTimeLeft(Math.max(0, targetDate - Date.now()));
     }, 1000);
     return () => clearInterval(timer);
