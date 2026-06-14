@@ -1,0 +1,6 @@
+{
+  "name": "Dooro Hogaanka",
+  "description": "Somali Presidential Election 2026 digital voting platform.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
